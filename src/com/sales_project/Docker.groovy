@@ -17,4 +17,9 @@ class Docker implements Serializable {
             script.sh "docker push $imageName-$version"
         }
     }
+
+    def pushDockerImage(String imageName, String version) {
+        script.echo "Pushing the Docker image..."
+        script.sh "docker push $imageName-$version"
+    }
 }
